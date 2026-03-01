@@ -1,18 +1,51 @@
-# React + Vite
+# Event Ticketing & Crowd Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+The **Event Ticketing & Crowd Management System** is a MERN stack web application designed to streamline ticket booking, seat management, and crowd control for large events like concerts, sports matches, and conferences.
 
-Currently, two official plugins are available:
+It provides:
+- Online ticket booking
+- QR code ticket verification
+- Real-time seat availability
+- Organizer dashboards with analytics
+- AI-based crowd flow prediction (optional)
+- AR/VR integration for virtual seating previews (optional)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### User Features
+- Online ticket booking with seat selection
+- QR-code generation for tickets
+- Booking history
+- Notifications for event updates
 
-Note: This will impact Vite dev & build performances.
+### Organizer Features
+- Real-time dashboard for attendance and seat occupancy
+- Seat availability monitoring
+- Analytics on bookings and revenue
+- QR-code ticket verification at entry
 
-## Expanding the ESLint configuration
+### Innovative Features
+- AI-powered crowd flow prediction
+- AR/VR venue and seat previews
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technology Stack
+
+**Frontend:** React.js  
+**Backend:** Node.js + Express.js  
+**Database:** MongoDB  
+**Real-time updates:** Socket.io  
+**Optional AI:** TensorFlow.js or Python microservice for crowd prediction  
+
+---
+
+## Database Design
+
+
+  "role": "user/organizer",
+  "bookings": ["ObjectId"]
+}
