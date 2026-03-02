@@ -1,0 +1,28 @@
+:root {
+  --bg: #07161d;
+  --surface: #0e2731;
+  --surface-soft: #102d39;
+  --line: #23424e;
+  --text: #f2fcff;
+  --muted: #8fb0bc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+}
