@@ -3,10 +3,10 @@ import ModuleGrid from '../components/ModuleGrid'
 import Sidebar from '../components/Sidebar'
 import { kpiCards, modules } from '../data/dashboardData'
 
-function DashboardPage() {
+function DashboardPage({ onCreateEvent }) {
   return (
     <div className="dashboard-shell">
-      <Sidebar />
+      <Sidebar active="dashboard" onOpenCreateEvent={onCreateEvent} />
 
       <main className="main-panel">
         <header className="topbar">
@@ -14,7 +14,9 @@ function DashboardPage() {
             <h1>Event Management Dashboard</h1>
             <p>Unified control panel for tickets, crowd, and operations</p>
           </div>
-          <button className="primary-btn">Create Event</button>
+          <button className="primary-btn" type="button" onClick={onCreateEvent}>
+            Create Event
+          </button>
         </header>
 
         <KpiGrid cards={kpiCards} />

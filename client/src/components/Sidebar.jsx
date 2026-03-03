@@ -1,4 +1,8 @@
-function Sidebar() {
+function Sidebar({
+  active = 'dashboard',
+  onOpenDashboard,
+  onOpenCreateEvent,
+}) {
   return (
     <aside className="sidebar">
       <div className="brand">
@@ -10,12 +14,35 @@ function Sidebar() {
       </div>
 
       <nav className="sidebar-nav">
-        <button className="nav-link active">Dashboard</button>
-        <button className="nav-link">Bookings</button>
-        <button className="nav-link">Seats</button>
-        <button className="nav-link">Verification</button>
-        <button className="nav-link">Analytics</button>
-        <button className="nav-link">Notifications</button>
+        <button
+          className={`nav-link ${active === 'dashboard' ? 'active' : ''}`}
+          type="button"
+          onClick={onOpenDashboard}
+        >
+          Dashboard
+        </button>
+        <button
+          className={`nav-link ${active === 'create-event' ? 'active' : ''}`}
+          type="button"
+          onClick={onOpenCreateEvent}
+        >
+          Create Event
+        </button>
+        <button className="nav-link" type="button">
+          Bookings
+        </button>
+        <button className="nav-link" type="button">
+          Seats
+        </button>
+        <button className="nav-link" type="button">
+          Verification
+        </button>
+        <button className="nav-link" type="button">
+          Analytics
+        </button>
+        <button className="nav-link" type="button">
+          Notifications
+        </button>
       </nav>
 
       <div className="sidebar-foot">
