@@ -2,6 +2,7 @@ function Sidebar({
   active = 'dashboard',
   onOpenDashboard,
   onOpenCreateEvent,
+  onOpenBookings,
 }) {
   return (
     <aside className="sidebar">
@@ -28,7 +29,11 @@ function Sidebar({
         >
           Create Event
         </button>
-        <button className="nav-link" type="button">
+        <button
+          className={`nav-link ${active === 'bookings' ? 'active' : ''}`}
+          type="button"
+          onClick={onOpenBookings}
+        >
           Bookings
         </button>
         <button className="nav-link" type="button">

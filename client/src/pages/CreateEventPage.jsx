@@ -1,9 +1,14 @@
 import Sidebar from '../components/Sidebar'
 
-function CreateEventPage({ onBack }) {
+function CreateEventPage({ onBack, onOpenBookings }) {
   return (
     <div className="dashboard-shell">
-      <Sidebar active="create-event" onOpenDashboard={onBack} />
+      <Sidebar
+        active="create-event"
+        onOpenDashboard={onBack}
+        onOpenCreateEvent={() => {}}
+        onOpenBookings={onOpenBookings}
+      />
 
       <main className="main-panel">
         <header className="topbar">

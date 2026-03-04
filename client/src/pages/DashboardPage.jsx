@@ -3,10 +3,15 @@ import ModuleGrid from '../components/ModuleGrid'
 import Sidebar from '../components/Sidebar'
 import { kpiCards, modules } from '../data/dashboardData'
 
-function DashboardPage({ onCreateEvent }) {
+function DashboardPage({ onCreateEvent, onOpenBookings }) {
   return (
     <div className="dashboard-shell">
-      <Sidebar active="dashboard" onOpenCreateEvent={onCreateEvent} />
+      <Sidebar
+        active="dashboard"
+        onOpenDashboard={() => {}}
+        onOpenCreateEvent={onCreateEvent}
+        onOpenBookings={onOpenBookings}
+      />
 
       <main className="main-panel">
         <header className="topbar">

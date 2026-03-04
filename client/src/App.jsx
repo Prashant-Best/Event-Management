@@ -2,6 +2,7 @@ import { useState } from 'react'
 import DashboardPage from './pages/DashboardPage'
 import LoginPage from './pages/LoginPage'
 import CreateEventPage from './pages/CreateEventPage'
+import BookingPage from './pages/BookingPage'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -12,10 +13,29 @@ function App() {
   }
 
   if (activePage === 'create-event') {
-    return <CreateEventPage onBack={() => setActivePage('dashboard')} />
+    return (
+      <CreateEventPage
+        onBack={() => setActivePage('dashboard')}
+        onOpenBookings={() => setActivePage('bookings')}
+      />
+    )
   }
 
-  return <DashboardPage onCreateEvent={() => setActivePage('create-event')} />
+  if (activePage === 'bookings') {
+    return (
+      <BookingPage
+        onBack={() => setActivePage('dashboard')}
+        onOpenCreateEvent={() => setActivePage('create-event')}
+      />
+    )
+  }
+
+  return (
+    <DashboardPage
+      onCreateEvent={() => setActivePage('create-event')}
+      onOpenBookings={() => setActivePage('bookings')}
+    />
+  )
 }
 
 export default App
