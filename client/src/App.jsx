@@ -3,6 +3,7 @@ import DashboardPage from './pages/DashboardPage'
 import LoginPage from './pages/LoginPage'
 import CreateEventPage from './pages/CreateEventPage'
 import BookingPage from './pages/BookingPage'
+import SeatsPage from './pages/SeatsPage'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -17,6 +18,7 @@ function App() {
       <CreateEventPage
         onBack={() => setActivePage('dashboard')}
         onOpenBookings={() => setActivePage('bookings')}
+        onOpenSeats={() => setActivePage('seats')}
       />
     )
   }
@@ -26,6 +28,17 @@ function App() {
       <BookingPage
         onBack={() => setActivePage('dashboard')}
         onOpenCreateEvent={() => setActivePage('create-event')}
+        onOpenSeats={() => setActivePage('seats')}
+      />
+    )
+  }
+
+  if (activePage === 'seats') {
+    return (
+      <SeatsPage
+        onBack={() => setActivePage('dashboard')}
+        onOpenCreateEvent={() => setActivePage('create-event')}
+        onOpenBookings={() => setActivePage('bookings')}
       />
     )
   }
@@ -34,6 +47,7 @@ function App() {
     <DashboardPage
       onCreateEvent={() => setActivePage('create-event')}
       onOpenBookings={() => setActivePage('bookings')}
+      onOpenSeats={() => setActivePage('seats')}
     />
   )
 }

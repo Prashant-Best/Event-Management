@@ -581,3 +581,121 @@
     position: static;
   }
 }
+
+.seats-layout {
+  display: grid;
+  gap: 14px;
+}
+
+.seats-actions {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seats-legend {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #bad1d8;
+  font-size: 0.85rem;
+}
+
+.seat-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.seat-dot.available {
+  background: #1f5f4c;
+  border-color: #4ec89d;
+}
+
+.seat-dot.selected {
+  background: #244c79;
+  border-color: #61a6ff;
+}
+
+.seat-dot.held {
+  background: #7a5d20;
+  border-color: #eec768;
+}
+
+.seat-dot.booked {
+  background: #632c3b;
+  border-color: #f58ea9;
+}
+
+.seat-dot.blocked {
+  background: #3a4452;
+  border-color: #8ea2bf;
+}
+
+.seat-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 8px;
+}
+
+.seat-cell {
+  border: 1px solid #2f5867;
+  border-radius: 10px;
+  background: rgba(5, 19, 25, 0.7);
+  color: #d0e8ee;
+  padding: 8px;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.seat-cell strong {
+  font-size: 0.85rem;
+}
+
+.seat-cell span {
+  font-size: 0.72rem;
+  color: #9cb8c2;
+}
+
+.seat-cell.available:hover,
+.seat-cell.selected {
+  border-color: #59cdd0;
+  transform: translateY(-1px);
+}
+
+.seat-cell.held {
+  border-color: #cba55a;
+  background: rgba(89, 71, 24, 0.45);
+}
+
+.seat-cell.booked {
+  border-color: #ad536d;
+  background: rgba(84, 28, 44, 0.45);
+}
+
+.seat-cell.blocked {
+  border-color: #5b6778;
+  background: rgba(42, 51, 66, 0.55);
+}
+
+.seat-cell:disabled {
+  cursor: not-allowed;
+}
+
+.seats-summary {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}

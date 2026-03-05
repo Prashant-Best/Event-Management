@@ -8,7 +8,7 @@ const ticketRates = {
   Student: 24,
 }
 
-function BookingPage({ onBack, onOpenCreateEvent }) {
+function BookingPage({ onBack, onOpenCreateEvent, onOpenSeats }) {
   const [form, setForm] = useState({
     eventName: '',
     eventDate: '',
@@ -160,6 +160,7 @@ function BookingPage({ onBack, onOpenCreateEvent }) {
         onOpenDashboard={onBack}
         onOpenCreateEvent={onOpenCreateEvent}
         onOpenBookings={() => {}}
+        onOpenSeats={onOpenSeats}
       />
 
       <main className="main-panel">
