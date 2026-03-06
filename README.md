@@ -43,9 +43,3 @@ It provides:
 
 ---
 
-## Database Design
-
-
-  "role": "user/organizer",
-  "bookings": ["ObjectId"]
-}
